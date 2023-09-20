@@ -51,3 +51,8 @@ void find_function(char *, char *, int, int);
 
 /* error handling in error.c */
 void error(int error_code, ...);
+
+/*main.c*/
+stack_t create_node(int n);
+void free_nodes(void);
+void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln);
