@@ -45,7 +45,7 @@ void read_file(FILE *fp)
  */
 int parse(char *buffer, int line_number, int format)
 {
-	char *opcode, val;
+	char *opcode, *val;
 	const char *delim = "\n";
 
 	if (buffer == NULL)
@@ -61,7 +61,7 @@ int parse(char *buffer, int line_number, int format)
 	if (strcmp(opcode, "queue") == 0)
 		return (1);
 
-	find_function(opcode, val, L_num, format);
+	find_function(opcode, val, line_number, format);
 	return (format);
 }
 
@@ -74,7 +74,7 @@ int parse(char *buffer, int line_number, int format)
  * 1 will be entered as queue
  * Return: void
  */
-void find_function(char *opcode, char * val, int L_num, int format)
+void find_function(char *opcode, char *val, int L_num, int format)
 {
 	int j;
 	int flag;
@@ -93,7 +93,7 @@ void find_function(char *opcode, char * val, int L_num, int format)
 	if (opcode[0] == '#')
 		return;
 
-	for (flag = 1, i = 0; list_functions[j].opcode != NULL; j++)
+	for (flag = 1, j = 0; list_functions[j].opcode != NULL; j++)
 	{
 		if (strcmp(opcode, list_functions[j].opcode) == 0)
 		{
@@ -114,7 +114,8 @@ void find_function(char *opcode, char * val, int L_num, int format)
  * 1 will be entered as queue
  * Return: void
  */
-void call_func(op_func func, char *op, char *val, int L_num, int format);
+void call_func(op_func func, char *op, char *val, int L_num, int format)
+
 {
 	stack_t *node;
 	int flag;
@@ -130,7 +131,7 @@ void call_func(op_func func, char *op, char *val, int L_num, int format);
 		}
 		if (val == NULL)
 			error(5, L_num);
-		for (k = 0; val[k] != NULL; k++)
+		for (k = 0; val[k] != '\0'; k++)
 		{
 			if (isdigit(val[k] == 0))
 				error(5, L_num);

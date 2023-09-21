@@ -40,7 +40,7 @@ typedef struct instruction_s
 } instruction_t;
 
 extern stack_t *head;
-typedef void (*f)(stack_t **stack, unsigned int);
+typedef void (*op_func)(stack_t **stack, unsigned int);
 
 /* File I/O file_op.c */
 void open_file(char *file_name);
@@ -53,6 +53,12 @@ void find_function(char *, char *, int, int);
 void error(int error_code, ...);
 
 /*main.c*/
-stack_t create_node(int n);
+stack_t *create_node(int n);
 void free_nodes(void);
 void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln);
+
+/* mandatory.c */
+void push(stack_t **new_node, __attribute__((unused))unsigned int ln);
+void print_all(stack_t **stack, unsigned int L_num);
+
+#endif
