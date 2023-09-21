@@ -67,4 +67,11 @@ void swap(stack_t **stack, unsigned int L_num);
 
 void add_node(stack_t **stack, unsigned int L_num);
 void nop(stack_t **stack, unsigned int L_num);
+
+/*adv.c*/
+void sub_nodes(stack_t **, unsigned int);
+void div_nodes(stack_t **, unsigned int);
+void mul_nodes(stack_t **, unsigned int);
+void mod_nodes(stack_t **, unsigned int);
+
 #endif

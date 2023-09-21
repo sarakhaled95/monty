@@ -88,6 +88,10 @@ void find_function(char *opcode, char *val, int L_num, int format)
 		{"swap", swap},
 		{"add", add_node},
 		{"nop", nop},
+		{"sub", sub_nodes},
+		{"div", div_nodes},
+		{"mul", mul_nodes},
+		{"mod", mod_nodes},
 		{NULL, NULL}
 	};
 
