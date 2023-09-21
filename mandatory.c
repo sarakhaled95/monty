@@ -1,15 +1,16 @@
 #include "monty.h"
 
 /**
- * push - push to stack
+ * push_to_stack - push to stack
  * @new_node: pointer to new node
  * @L_num: line number
  * Return: void
  */
-void push_to_stack(stack_t **new_node, __attribute__((unused))unsigned int L_num)
+void push_to_stack(stack_t **new_node, unsigned int L_num)
 {
 	stack_t *temp;
 
+	(void) L_num;
 	if (new_node == NULL || *new_node == NULL)
 		exit(EXIT_FAILURE);
 	if (head == NULL)
