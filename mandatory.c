@@ -6,7 +6,7 @@
  * @L_num: line number
  * Return: void
  */
-void push(stack_t **new_node, __attribute__((unused))unsigned int L_num)
+void push_to_stack(stack_t **new_node, __attribute__((unused))unsigned int L_num)
 {
 	stack_t *temp;
 

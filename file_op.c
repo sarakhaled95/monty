@@ -81,7 +81,7 @@ void find_function(char *opcode, char *val, int L_num, int format)
 	int flag;
 
 	instruction_t list_functions[] = {
-		{"push", push},
+		{"push", push_to_stack},
 		{"pall", print_all},
 		{"pint", print_top},
 		{"pop", pop},

@@ -59,7 +59,7 @@ void free_nodes(void);
 void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln);
 
 /* mandatory.c */
-void push(stack_t **new_node, __attribute__((unused))unsigned int ln);
+void push_to_stack(stack_t **new_node, __attribute__((unused))unsigned int ln);
 void print_all(stack_t **stack, unsigned int L_num);
 void print_top(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int L_num);
