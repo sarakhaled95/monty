@@ -92,6 +92,10 @@ void find_function(char *opcode, char *val, int L_num, int format)
 		{"div", div_nodes},
 		{"mul", mul_nodes},
 		{"mod", mod_nodes},
+		{"pchar", print_char},
+		{"pstr", print_str},
+		{"rotl", rotl},
+		{"rotr", rotr},
 		{NULL, NULL}
 	};
 

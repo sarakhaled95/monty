@@ -52,11 +52,12 @@ void find_function(char *, char *, int, int);
 /* error handling in error.c */
 void error(int error_code, ...);
 void more_error(int error_code, ...);
-
+void str_error(int error_code, ...);
 /*main.c*/
 stack_t *create_node(int n);
 void free_nodes(void);
 void add_to_queue(stack_t **new_node, __attribute__((unused))unsigned int ln);
+int len_chars(FILE *);
 
 /* mandatory.c */
 void push_to_stack(stack_t **new_node, __attribute__((unused))unsigned int ln);
@@ -73,5 +74,11 @@ void sub_nodes(stack_t **, unsigned int);
 void div_nodes(stack_t **, unsigned int);
 void mul_nodes(stack_t **, unsigned int);
 void mod_nodes(stack_t **, unsigned int);
+
+/*adv2.c*/
+void print_char(stack_t **stack, unsigned int line_number);
+void print_str(stack_t **stack, __attribute__((unused))unsigned int ln);
+void rotl(stack_t **stack, __attribute__((unused))unsigned int ln);
+void rotr(stack_t **stack, __attribute__((unused))unsigned int ln);
 
 #endif
