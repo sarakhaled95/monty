@@ -69,7 +69,7 @@ void pop(stack_t **stack, unsigned int L_num)
 	stack_t *temp;
 
 	if (stack == NULL || *stack == NULL)
-		more_err(7, L_num);
+		more_error(7, L_num);
 
 	temp = *stack;
 	*stack = temp->next;
@@ -89,7 +89,7 @@ void swap(stack_t **stack, unsigned int L_num)
 	stack_t *temp;
 
 	if (stack == NULL || *stack == NULL || (*stack)->next == NULL)
-		more_err(8, L_num, "swap");
+		more_error(8, L_num, "swap");
 	temp = (*stack)->next;
 	(*stack)->next = temp->next;
 	if (temp->next != NULL)
