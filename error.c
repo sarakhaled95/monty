@@ -2,12 +2,12 @@
 
 /**
  * error - Prints appropiate error messages det by their error code.
- * @error_code: The error codes are the following:
+ * @err_code: The error codes are the following:
  * (1) => The user doesn't give any file to the program.
  * (2) => The file provided is not a file that can be opened or read.
  * (3) => The file provided contains an invalid instruction.
  * (4) => When the program is unable to malloc more memory.
- * (5) => When the parameter passed to the instruction "push" 
+ * (5) => When the parameter passed to the instruction "push"
  * is not an int.
  * (6) => When the stack it empty for pint.
  * (7) => When the stack it empty for pop.

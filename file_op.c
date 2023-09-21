@@ -8,6 +8,7 @@
 void open_file(char *file_name)
 {
 	FILE *fp;
+
 	fp = fopen(file_name, "r");
 
 	if (file_name == NULL || fp == NULL)
@@ -38,7 +39,7 @@ void read_file(FILE *fp)
 /**
  * parse - sparates each line to token to know which func to call
  * @buffer: line from file
- * @L_num: line number
+ * @line_number: line number
  * @format: storage format. 0 will be entered as stack
  * 1 will be entered as queue
  * Return: 0 if opcode stack 1 if queue

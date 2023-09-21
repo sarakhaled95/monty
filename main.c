@@ -1,11 +1,12 @@
 #include "monty.h"
+
 stack_t *head = NULL;
 
 /**
- * main - entry point
+ * main - Entry point
  * @argc: arguments count
  * @argv: arguments vector
- * Return: always 0
+ * Return: Always 0
  */
 int main(int argc, char *argv[])
 {

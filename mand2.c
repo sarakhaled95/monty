@@ -3,7 +3,7 @@
 /**
  * add_node - adds the top two elements of the stack
  * @stack: pointer to top of stack
- * L_num: line number
+ * @L_num: line number
  * Return: void
  */
 void add_node(stack_t **stack, unsigned int L_num)

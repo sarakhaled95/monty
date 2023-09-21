@@ -3,7 +3,7 @@
 /**
  * push - push to stack
  * @new_node: pointer to new node
- * L_num: line number
+ * @L_num: line number
  * Return: void
  */
 void push(stack_t **new_node, __attribute__((unused))unsigned int L_num)
@@ -26,7 +26,7 @@ void push(stack_t **new_node, __attribute__((unused))unsigned int L_num)
 /**
  * print_all - print stack
  * @stack: pointer at head of stack
- * L_num: line number
+ * @L_num: line number
  * Return: void
  */
 void print_all(stack_t **stack, unsigned int L_num)
@@ -48,7 +48,7 @@ void print_all(stack_t **stack, unsigned int L_num)
 /**
  * print_top - prints the value at the top of the stack
  * @stack: pointer at head of stack
- * L_num: line number
+ * @line_number: line number
  * Return: void
  */
 void print_top(stack_t **stack, unsigned int line_number)
@@ -61,7 +61,7 @@ void print_top(stack_t **stack, unsigned int line_number)
 /**
  * pop - removes the top element of the stack
  * @stack: pointer at head of stack
- * L_num: line number
+ * @L_num: line number
  * Return: void
  */
 void pop(stack_t **stack, unsigned int L_num)
@@ -81,7 +81,7 @@ void pop(stack_t **stack, unsigned int L_num)
 /**
  * swap - swaps the top two elements of the stack
  * @stack: pointer at head of stack
- * L_num: line number
+ * @L_num: line number
  * Return: void
  */
 void swap(stack_t **stack, unsigned int L_num)
